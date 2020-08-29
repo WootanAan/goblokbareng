@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>by Aan Suseno</title>
+        <style type="text/css">
+            a{
+                color: blue;            
+            }
+        </style>
+        <script language="JavaScript" type="text/JavaScript">
+            function hitung() {
+                var a = parseFloat(document.formAan.a.value);
+                var x = parseFloat(document.formAan.b.value);
+                var b = x * -1;
+                var ulang;
+                var mumet = b + 1;
+                var mumet1 = b + 2;
+                var mumet2 = b + 3;
+                var c = Math.pow(a,b);
+
+                document.getElementById("langkah0").innerHTML = "a<sup>-n</sup> = 1/a * 1/a * 1/a ... * 1/a sebanyak n kali<br>";
+
+                if (b != 0) {
+                    document.getElementById("langkah0-1").innerHTML = a + "<sup>-" + b + "</sup> = ";
+                    document.getElementById("langkah0-2").innerHTML = "(1/" + a + ")<sup>" + b + "</sup><br>";
+                    document.getElementById("langkah0-3").innerHTML = a + "<sup>-" + b + "</sup> = ";
+
+                    for (var ulang = 1; ulang < b; ulang++) {
+                        document.getElementById("langkah" + ulang).innerHTML = "(1/" + a + ") * ";
+                    }
+
+                    document.getElementById("langkah" + mumet).innerHTML = "(1/" + a + ")<br>";
+                    document.getElementById("langkah" +  + mumet1).innerHTML = a + "<sup>-" + b + "</sup> = " + "(1/" + c + ")<br>";
+                    document.getElementById("langkah" + mumet2).innerHTML = a + "<sup>-" + b + "</sup> = " + 1/c;
+                } else {
+                    document.getElementById("langkah" + mumet1).innerHTML = a + "<sup>" + b + "</sup> = " + c;
+                }   
+            }
+        </script>
+        
+    </head>
+    <body>
+
+        <a href="../../index.html">
+            <button>Home</button>
+        </a>
+        <hr>
+        <i>*hanya untuk pangkat negatif dan 0</i><br>
+        <i>*reload halaman setiap operasi<br></i>
+        <i>*untuk sementara maksimal pangkat 100<br></i>
+        <form name="formAan">
+            <input type="text" name="a" style="width: 27px;">
+            <sup><input type="text" name="b" style="width: 12px"></sup>
+            <br> <br>
+            <input type="button" name="tombol" value="hitung" onclick="hitung()">
+        </form>
+        
+        <i>Jawab:</i><br>
+        <text id="langkah0"></text>
+        <text id="langkah0-1"></text>
+        <text id="langkah0-2"></text>
+        <text id="langkah0-3"></text>
+        <text id="langkah1"></text>
+        <text id="langkah2"></text>
+        <text id="langkah3"></text>
+        <text id="langkah4"></text>
+        <text id="langkah5"></text>
+        <text id="langkah6"></text>
+        <text id="langkah7"></text>
+        <text id="langkah8"></text>
+        <text id="langkah9"></text>
+        <text id="langkah10"></text>
+        <text id="langkah11"></text>
+        <text id="langkah12"></text>
+        <text id="langkah13"></text>
+        <text id="langkah14"></text>
+        <text id="langkah15"></text>
+        <text id="langkah16"></text>
+        <text id="langkah17"></text>
+        <text id="langkah18"></text>
+        <text id="langkah19"></text>
+        <text id="langkah20"></text>
+        <text id="langkah21"></text>
+        <text id="langkah22"></text>
+        <text id="langkah23"></text>
+        <text id="langkah24"></text>
+        <text id="langkah25"></text>
+        <text id="langkah26"></text>
+        <text id="langkah27"></text>
+        <text id="langkah28"></text>
+        <text id="langkah29"></text>
+        <text id="langkah30"></text>
+        <text id="langkah31"></text>
+        <text id="langkah32"></text>
+        <text id="langkah33"></text>
+        <text id="langkah34"></text>
+        <text id="langkah35"></text>
+        <text id="langkah36"></text>
+        <text id="langkah37"></text>
+        <text id="langkah38"></text>
+        <text id="langkah39"></text>
+        <text id="langkah40"></text>
+        <text id="langkah41"></text>
+        <text id="langkah42"></text>
+        <text id="langkah43"></text>
+        <text id="langkah44"></text>
+        <text id="langkah45"></text>
+        <text id="langkah46"></text>
+        <text id="langkah47"></text>
+        <text id="langkah48"></text>
+        <text id="langkah49"></text>
+        <text id="langkah50"></text>
+        <text id="langkah51"></text>
+        <text id="langkah52"></text>
+        <text id="langkah53"></text>
+        <text id="langkah54"></text>
+        <text id="langkah55"></text>
+        <text id="langkah56"></text>
+        <text id="langkah57"></text>
+        <text id="langkah58"></text>
+        <text id="langkah59"></text>
+        <text id="langkah60"></text>
+        <text id="langkah61"></text>
+        <text id="langkah62"></text>
+        <text id="langkah63"></text>
+        <text id="langkah64"></text>
+        <text id="langkah65"></text>
+        <text id="langkah66"></text>
+        <text id="langkah67"></text>
+        <text id="langkah68"></text>
+        <text id="langkah69"></text>
+        <text id="langkah70"></text>
+        <text id="langkah71"></text>
+        <text id="langkah72"></text>
+        <text id="langkah73"></text>
+        <text id="langkah74"></text>
+        <text id="langkah75"></text>
+        <text id="langkah76"></text>
+        <text id="langkah77"></text>
+        <text id="langkah78"></text>
+        <text id="langkah79"></text>
+        <text id="langkah80"></text>
+        <text id="langkah81"></text>
+        <text id="langkah82"></text>
+        <text id="langkah83"></text>
+        <text id="langkah84"></text>
+        <text id="langkah85"></text>
+        <text id="langkah86"></text>
+        <text id="langkah87"></text>
+        <text id="langkah88"></text>
+        <text id="langkah89"></text>
+        <text id="langkah90"></text>
+        <text id="langkah91"></text>
+        <text id="langkah92"></text>
+        <text id="langkah93"></text>
+        <text id="langkah94"></text>
+        <text id="langkah95"></text>
+        <text id="langkah96"></text>
+        <text id="langkah97"></text>
+        <text id="langkah98"></text>
+        <text id="langkah99"></text>
+        <text id="langkah100"></text>
+        <text id="langkah101"></text>
+        <text id="langkah102"></text>
+
+
+        <!-- hubungi saya -->
+        <div style="text-align: center;">
+            <hr/>
+            <p>Laporan masalah, kritik, saran, atau pengajuan materi silahkan hubungi Aan:</p>
+            <a href="https://facebook.com/aan.s.o.92"> Facebook </a> -
+            <a href="https://twiter.com/AanWootan?s=09"> Twiter </a> -
+            <a href="https://www.instagram.com/_aanrunner/"> Instagram </a> -
+            <a href="https://github.com/WootanAan"> GitHub </a> - 
+            <a href="mailto:aansuseno822@gmail.com">  Email </a> -
+            <a href="https://wa.me/6285222278081"> WhatApps </a>-
+            <a href="https://t.me/AanSuseno"> Telegram</a>
+        </div>
+    </body>
+</html>

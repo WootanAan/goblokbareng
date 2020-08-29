@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            by AAn Suseno
+        </title>
+        <style type="text/css">
+            a{
+                color: blue;            
+            }
+            input{
+                border: black 1px solid;
+                border-radius: 3px;
+            }
+        </style>
+        <script language="JavaScript" type="text/JavaScript">
+
+            function hitung() {
+                var a = parseFloat(document.formAan.a.value);
+                var b = parseFloat(document.formAan.b.value);
+                var c = parseFloat(document.formAan.c.value);
+                var d = parseFloat(document.formAan.d.value);
+                var e = -1 * b / a;
+                var f = c / a;
+                var g = e - (2*d);
+                var h = f - (d * e) + (d * d);
+                
+                document.getElementById("langkah1").innerHTML = a + "x<sup>2</sup> + " + b + "x + " + c + " = 0 => a=" + a + "; b=" + b + "; c=" + c + "<br><br>";
+                document.getElementById("langkah2").innerHTML = "Akar2 persamaan " + a + "x<sup>2</sup> + " + b + "x + " + c + " = 0 adalah <i>m</i> dan <i>n</i><br>";
+                document.getElementById("langkah3").innerHTML = "<i>m</i> + <i>n</i> = -(b/a) = -(" + b + "/" + a + ") = " + e + "<br>";
+                document.getElementById("langkah4").innerHTML = "<i>m</i> * <i>n</i> = c/a = " + c + "/" + a + " = " + f + "<br><br>";
+                document.getElementById("langkah5").innerHTML = "x<sub>1</sub> dan x<sub>2</sub> adalah akar2 persamaan kuadrat baru, maka x<sub>1</sub> = m-" + d + " dan x<sub>2</sub> = n-" + d + "<br>";
+                document.getElementById("langkah6").innerHTML = "x<sub>1</sub> + x<sub>2</sub> = m-" + d + "+n-" + d + " = (m + n) - " + 2*d + " = " + e + " - " + 2*d + " = " + g + "<br>";
+                document.getElementById("langkah7").innerHTML = "x<sub>1</sub> * x<sub>2</sub> = (m-" + d + ")(n-" + d + ") = mn - " + d + "(m+n) + " + d * d + " = " + f + " - " +d +"(" + e + ") + " + d * d + " = " +h +"<br><br>";
+                document.getElementById("langkah8").innerHTML = "Persamaan kuadrat baru:<br>";
+
+                if (g < 0) {
+                    var simbol = '+';
+                    var g = g * -1;
+                } else {
+                    var simbol = '-';
+                }
+                if (h < 0) {
+                    var simbol1 = '- ';
+                    var h = h * -1;
+                } else {
+                    var simbol1 = '+ ';
+                }
+                document.getElementById("langkah9").innerHTML = "x<sup>2</sup> - (x<sub>1</sub> + x<sub>2</sub>)x + x<sub>1</sub>x<sub>2</sub> = x<sup>2</sup> " + simbol + " "+ g + "x " + simbol1 + h + " = 0";
+            }
+
+            function hitung1() {
+                var a = parseFloat(document.formAan.a.value);
+                var b = parseFloat(document.formAan.b.value);
+                var c = parseFloat(document.formAan.c.value);
+                var d = parseFloat(document.formAan.d1.value);
+                var e = -1 * b / a;
+                var f = c / a;
+                var g = e + (2*d);
+                var h = f + (d * e) + (d * d);
+
+                document.getElementById("langkah12").innerHTML = a + "x<sup>2</sup> + " + b + "x + " + c + " = 0 => a=" + a + "; b=" + b + "; c=" + c + "<br><br>";
+                document.getElementById("langkah22").innerHTML = "Akar2 persamaan " + a + "x<sup>2</sup> + " + b + "x + " + c + " = 0 adalah <i>m</i> dan <i>n</i><br>";
+                document.getElementById("langkah32").innerHTML = "<i>m</i> + <i>n</i> = -(b/a) = -(" + b + "/" + a + ") = " + e + "<br>";
+                document.getElementById("langkah42").innerHTML = "<i>m</i> * <i>n</i> = c/a = " + c + "/" + a + " = " + f + "<br><br>";
+                document.getElementById("langkah52").innerHTML = "x<sub>1</sub> dan x<sub>2</sub> adalah akar2 persamaan kuadrat baru, maka x<sub>1</sub> = m+" + d + " dan x<sub>2</sub> = n+" + d + "<br>";
+                document.getElementById("langkah62").innerHTML = "x<sub>1</sub> + x<sub>2</sub> = m+" + d + "+n+" + d + " = (m + n) + " + 2*d + " = " + e + " + " + 2*d + " = " + g + "<br>";
+                document.getElementById("langkah72").innerHTML = "x<sub>1</sub> * x<sub>2</sub> = (m+" + d + ")(n+" + d + ") = mn + " + d + "(m+n) + " + d * d + " = " + f + " + " +d +"(" + e + ") + " + d * d + " = " +h +"<br><br>";
+                document.getElementById("langkah82").innerHTML = "Persamaan kuadrat baru:<br>";
+                if (g < 0) {
+                    var simbol = '+';
+                    var g = g * -1;
+                } else {
+                    var simbol = '-';
+                }
+                if (h < 0) {
+                    var simbol1 = '- ';
+                    var h = h * -1;
+                } else {
+                    var simbol1 = '+ ';
+                }
+                document.getElementById("langkah92").innerHTML = "x<sup>2</sup> - (x<sub>1</sub> + x<sub>2</sub>)x + x<sub>1</sub>x<sub>2</sub> = x<sup>2</sup> " + simbol + " "+ g + "x " + simbol1 + h + " = 0";
+            }
+            function hitung3() {
+                var a = parseFloat(document.formAan.a.value);
+                var b = parseFloat(document.formAan.b.value);
+                var c = parseFloat(document.formAan.c.value);
+                var d = parseFloat(document.formAan.d3.value);
+                var e = -1 * b / a;
+                var f = c / a;
+                var g = e * d;
+                var h = f * d * d;
+
+                document.getElementById("langkah15").innerHTML = a + "x<sup>2</sup> + " + b + "x + " + c + " = 0 => a=" + a + "; b=" + b + "; c=" + c + "<br><br>";
+                document.getElementById("langkah25").innerHTML = "Akar2 persamaan " + a + "x<sup>2</sup> + " + b + "x + " + c + " = 0 adalah <i>m</i> dan <i>n</i><br>";
+                document.getElementById("langkah35").innerHTML = "<i>m</i> + <i>n</i> = -(b/a) = -(" + b + "/" + a + ") = " + e + "<br>";
+                document.getElementById("langkah45").innerHTML = "<i>m</i> * <i>n</i> = c/a = " + c + "/" + a + " = " + f + "<br><br>";
+                document.getElementById("langkah55").innerHTML = "x<sub>1</sub> dan x<sub>2</sub> adalah akar2 persamaan kuadrat baru, maka x<sub>1</sub> = m*" + d + " dan x<sub>2</sub> = n*" + d + "<br>";
+                document.getElementById("langkah65").innerHTML = "x<sub>1</sub> + x<sub>2</sub> = (m*" + d + ") + (n*" + d + ") = " +d +"(m + n) = " + d + " * " + e + " = " + g + "<br>";
+                document.getElementById("langkah75").innerHTML = "x<sub>1</sub> * x<sub>2</sub> = (m*" + d + ")(n*" + d + ") = mn * " + d * d + " = " + f + " * " +d * d + " = " +h +"<br><br>";
+                document.getElementById("langkah85").innerHTML = "Persamaan kuadrat baru:<br>";
+                if (g < 0) {
+                    var simbol = '+';
+                    var g = g * -1;
+                } else {
+                    var simbol = '-';
+                }
+                if (h < 0) {
+                    var simbol1 = '- ';
+                    var h = h * -1;
+                } else {
+                    var simbol1 = '+ ';
+                }
+                document.getElementById("langkah95").innerHTML = "x<sup>2</sup> - (x<sub>1</sub> + x<sub>2</sub>)x + x<sub>1</sub>x<sub>2</sub> = x<sup>2</sup> " + simbol + " "+ g + "x " + simbol1 + h + " = 0";
+            }
+            function hitung2() {
+                var a = parseFloat(document.formAan.a.value);
+                var b = parseFloat(document.formAan.b.value);
+                var c = parseFloat(document.formAan.c.value);
+                var e = -1 * b / a;
+                var f = c / a;
+                var g = e/f;
+                var h = 1/f;
+
+                document.getElementById("langkah13").innerHTML = a + "x<sup>2</sup> + " + b + "x + " + c + " = 0 => a=" + a + "; b=" + b + "; c=" + c + "<br><br>";
+                document.getElementById("langkah23").innerHTML = "Akar2 persamaan " + a + "x<sup>2</sup> + " + b + "x + " + c + " = 0 adalah <i>m</i> dan <i>n</i><br>";
+                document.getElementById("langkah33").innerHTML = "<i>m</i> + <i>n</i> = -(b/a) = -(" + b + "/" + a + ") = " + e + "<br>";
+                document.getElementById("langkah43").innerHTML = "<i>m</i> * <i>n</i> = c/a = " + c + "/" + a + " = " + f + "<br><br>";
+                document.getElementById("langkah53").innerHTML = "x<sub>1</sub> dan x<sub>2</sub> adalah akar2 persamaan kuadrat baru, maka x<sub>1</sub> = 1/m dan x<sub>2</sub> = 1/n<br>";
+                document.getElementById("langkah63").innerHTML = "x<sub>1</sub> + x<sub>2</sub> = (1/m) + (1/n) = (m + n)/(mn) = " + e + "/" + f + " = " + g+ "<br>";
+                document.getElementById("langkah73").innerHTML = "x<sub>1</sub> * x<sub>2</sub> = (1/m)(1/n) = 1/(mn) = 1/" + f + " = " + h + "<br><br>";
+
+                document.getElementById("langkah83").innerHTML = "Persamaan kuadrat baru:<br>";
+
+                if (g < 0) {
+                    var simbol = '+';
+                    var g = g * -1;
+                } else {
+                    var simbol = '-';
+                }
+                if (h < 0) {
+                    var simbol1 = '- ';
+
+                    var h = h * -1;
+                } else {
+                    var simbol1 = '+ ';
+                }
+                document.getElementById("langkah93").innerHTML = "x<sup>2</sup> - (x<sub>1</sub> + x<sub>2</sub>)x + x<sub>1</sub>x<sub>2</sub> = x<sup>2</sup> " + simbol + " "+ g + "x " + simbol1 + h + " = 0";
+            }
+        </script>
+    </head>
+    <body>
+        <a href="../../index.html">
+            <button>Home</button>
+        </a>
+
+        <form name="formAan">
+            <div style="background-color: rgb(200,200,200);">
+            <hr>
+                Masukkan persamaan kuadrat yg berhubungan
+                <br>
+                <input type="text" name="a" style="width: 20px;" placeholder="a">x<sup>2</sup> + 
+                <input type="text" name="b" style="width: 20px;" placeholder="b">x + 
+                <input type="text" name="c" style="width: 20px;" placeholder="c"> = 0
+                <hr>
+            </div>
+            Tentukan kuadrat baru jika akar-akarnya
+            <input type="text" name="d" style="width: 20px;">
+            <b>kuranganya</b> dari akar2 persamaan diatas!
+            <br>
+            <input type="button" onclick="hitung()" value="hitung"></input>
+            <br>
+            <text id="langkah1"></text>
+            <text id="langkah2"></text>
+            <text id="langkah3"></text>
+            <text id="langkah4"></text>
+            <text id="langkah5"></text>
+            <text id="langkah6"></text>
+            <text id="langkah7"></text>
+            <text id="langkah8"></text>
+            <text id="langkah9"></text>
+            <hr>
+            Tentukan kuadrat baru jika akar-akarnya
+            <input type="text" name="d1" style="width: 20px;">
+            <b>lebih banyak</b> dari akar2 persamaan diatas!
+            <br>
+            <input type="button" onclick="hitung1()" value="hitung"></input>
+            <br>
+            <text id="langkah12"></text>
+            <text id="langkah22"></text>
+            <text id="langkah32"></text>
+            <text id="langkah42"></text>
+            <text id="langkah52"></text>
+            <text id="langkah62"></text>
+            <text id="langkah72"></text>
+            <text id="langkah82"></text>
+            <text id="langkah92"></text>
+            <hr>
+            Tentukan kuadrat baru jika akar-akarnya
+            <input type="text" name="d3" style="width: 20px;">
+            <b>kali lebih banyak</b> dari akar2 persamaan diatas!
+            <br>
+            <input type="button" onclick="hitung3()" value="hitung"></input>
+            <br>
+            <text id="langkah15"></text>
+            <text id="langkah25"></text>
+            <text id="langkah35"></text>
+            <text id="langkah45"></text>
+            <text id="langkah55"></text>
+            <text id="langkah65"></text>
+            <text id="langkah75"></text>
+            <text id="langkah85"></text>
+            <text id="langkah95"></text>
+            <hr>
+            Diketahui <i>m</i> dan <i>n</i> merupakan akar2 diatas.<br>
+            Tentukan persamaan kuadrat baru yg akar2nya <i>1/m</i> dan <i>1/n</i>!
+            <br>
+            <input type="button" onclick="hitung2()" value="hitung"></input>
+            <br>
+            <text id="langkah13"></text>
+            <text id="langkah23"></text>
+            <text id="langkah33"></text>
+            <text id="langkah43"></text>
+            <text id="langkah53"></text>
+            <text id="langkah63"></text>
+            <text id="langkah73"></text>
+            <text id="langkah83"></text>
+            <text id="langkah93"></text>
+        </form>
+
+
+
+        <!-- hubungi saya -->
+        <div style="text-align: center;">
+            <hr/>
+            <p>Laporan masalah, kritik, saran, atau pengajuan materi silahkan hubungi Aan:</p>
+            <a href="https://facebook.com/aan.s.o.92"> Facebook </a> -
+            <a href="https://twiter.com/AanWootan?s=09"> Twiter </a> -
+            <a href="https://www.instagram.com/_aanrunner/"> Instagram </a> -
+            <a href="https://github.com/WootanAan"> GitHub </a> - 
+            <a href="mailto:aansuseno822@gmail.com">  Email </a> -
+            <a href="https://wa.me/6285222278081"> WhatsApp </a>-
+            <a href="https://t.me/AanSuseno"> Telegram</a>
+        </div>
+    </body>
+</html>

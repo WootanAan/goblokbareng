@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>by Aan Suseno</title>
+        <style type="text/css">
+            a{
+                color: blue;            
+            }
+        </style>
+        <script type="text/javascript">
+            function sifat1() {
+                var a = parseFloat(document.formAan.a.value);
+                var b = parseFloat(document.formAan.b.value);
+                var c = 1/b;
+                var hasilAkar = Math.pow(a,c);
+
+                document.getElementById("langkah").innerHTML = hasilAkar;
+            }
+        </script>
+    </head>
+    <body>
+
+        <a href="../../index.html">
+            <button>Home</button>
+        </a>
+        <hr>
+        <text><sup>n</sup>&radic;(a)</text><br>
+
+        <form name="formAan">
+            <sup><input type="text" name="b" style="width: 12px" placeholder="n"></sup>
+            &radic;(<input type="text" name="a" style="width: 27px;" placeholder="a">)
+            <input type="button" value="=" onclick="sifat1()"> 
+            <text id="langkah"></text>
+        </form>
+        
+
+
+        <!-- hubungi saya -->
+        <div style="text-align: center;">
+            <hr/>
+            <p>Laporan masalah, kritik, saran, atau pengajuan materi silahkan hubungi Aan:</p>
+            <a href="https://facebook.com/aan.s.o.92"> Facebook </a> -
+            <a href="https://twiter.com/AanWootan?s=09"> Twiter </a> -
+            <a href="https://www.instagram.com/_aanrunner/"> Instagram </a> -
+            <a href="https://github.com/WootanAan"> GitHub </a> - 
+            <a href="mailto:aansuseno822@gmail.com">  Email </a> -
+            <a href="https://wa.me/6285222278081"> WhatApps </a>-
+            <a href="https://t.me/AanSuseno"> Telegram</a>
+        </div>
+    </body>
+</html>

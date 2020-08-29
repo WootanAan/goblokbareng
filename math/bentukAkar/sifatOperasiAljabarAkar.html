@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>by Aan Suseno</title>
+        <style type="text/css">
+            a{
+                color: blue;            
+            }
+        </style>
+        <script type="text/javascript">
+            function komutatif() {
+                var a = parseFloat(document.formAan.a.value);
+                var b = parseFloat(document.formAan.b.value);
+                document.getElementById("langkah").innerHTML = "&radic;(" + b + ") + &radic;(" + a + ")";
+            }
+            function komutatif1() {
+                var a = parseFloat(document.formAan.a1.value);
+                var b = parseFloat(document.formAan.b1.value);
+                document.getElementById("langkah1").innerHTML = "&radic;(" + b + ") * &radic;(" + a + ")";
+            }
+            function asosiatif() {
+                var a = parseFloat(document.formAan.a2.value);
+                var b = parseFloat(document.formAan.b2.value);
+                var c = parseFloat(document.formAan.c2.value);
+                document.getElementById("langkah2").innerHTML = "(&radic;(" + a + ") + &radic;(" + b + ")) + &radic;(" + c + ")";
+            }
+            function asosiatif1() {
+                var a = parseFloat(document.formAan.a3.value);
+                var b = parseFloat(document.formAan.b3.value);
+                var c = parseFloat(document.formAan.c3.value);
+                document.getElementById("langkah3").innerHTML = "(&radic;(" + a + ") * &radic;(" + b + "))&radic;(" + c + ")";
+            }
+            function distributif() {
+                var a = parseFloat(document.formAan.a4.value);
+                var b = parseFloat(document.formAan.b4.value);
+                var c = parseFloat(document.formAan.c4.value);
+                document.getElementById("langkah4").innerHTML = "<br>->&radic;(" + a + " * " + b + ") + &radic;(" + a + " * " + c + ")";
+                document.getElementById("langkah5").innerHTML = "<br>->&radic;(" + a * b + ") + &radic;(" + a * c + ")";
+            }
+        </script>
+    </head>
+    <body>
+
+        <a href="../../index.html">
+            <button>Home</button>
+        </a>
+        <hr>
+        
+
+        <form name="formAan">
+        	<b>Komutatif</b><br>
+        	<text>&radic;(a) + &radic;(b) = &radic;(b) + &radic;(a)</text><br>
+            &radic;(<input type="text" name="a" style="width: 20px;" placeholder="a">) + 
+            &radic;(<input type="text" name="b" style="width: 20px;" placeholder="b">)
+            <input type="button" value="=" onclick="komutatif()"> 
+            <text id="langkah"></text>
+            <br><br><br>
+            <text>&radic;(a) * &radic;(b) = &radic;(b) * &radic;(a)</text><br>
+            &radic;(<input type="text" name="a1" style="width: 20px;" placeholder="a">) * 
+            &radic;(<input type="text" name="b1" style="width: 20px;" placeholder="b">)
+            <input type="button" value="=" onclick="komutatif1()"> 
+            <text id="langkah1"></text>
+            <hr>
+            <b>Asosiatif</b><br>
+            <text>&radic;(a) + (&radic;(b) + &radic;(c)) = (&radic;(a) + &radic;(b)) + &radic;(c)</text><br>
+            &radic;(<input type="text" name="a2" style="width: 20px;" placeholder="a">) + 
+            (&radic;(<input type="text" name="b2" style="width: 20px;" placeholder="b">) + 
+            &radic;(<input type="text" name="c2" style="width: 20px;" placeholder="c">))
+            <input type="button" value="=" onclick="asosiatif()"> 
+            <text id="langkah2"></text>
+            <br><br><br>
+            <text>&radic;(a)(&radic;(b) * &radic;(c)) = (&radic;(a) * &radic;(b))&radic;(c)</text><br>
+            &radic;(<input type="text" name="a3" style="width: 20px;" placeholder="a">)
+            (&radic;(<input type="text" name="b3" style="width: 20px;" placeholder="b">) * 
+            &radic;(<input type="text" name="c3" style="width: 20px;" placeholder="c">))
+            <input type="button" value="=" onclick="asosiatif1()"> 
+            <text id="langkah3"></text>
+            <hr>
+            <b>Distributif</b><br>
+            <text>&radic;(a) * (&radic;(b) + &radic;(c)) = &radic;(ab) + &radic;(ac)</text><br>
+            &radic;(<input type="text" name="a4" style="width: 20px;" placeholder="a">) * 
+            (&radic;(<input type="text" name="b4" style="width: 20px;" placeholder="b">) + 
+            &radic;(<input type="text" name="c4" style="width: 20px;" placeholder="c">))
+            <input type="button" value="=" onclick="distributif()"> 
+            <text id="langkah4"></text>
+            <text id="langkah5"></text>
+            
+        </form>
+        
+
+
+        <!-- hubungi saya -->
+        <div style="text-align: center;">
+            <hr/>
+            <p>Laporan masalah, kritik, saran, atau pengajuan materi silahkan hubungi Aan:</p>
+            <a href="https://facebook.com/aan.s.o.92"> Facebook </a> -
+            <a href="https://twiter.com/AanWootan?s=09"> Twiter </a> -
+            <a href="https://www.instagram.com/_aanrunner/"> Instagram </a> -
+            <a href="https://github.com/WootanAan"> GitHub </a> - 
+            <a href="mailto:aansuseno822@gmail.com">  Email </a> -
+            <a href="https://wa.me/6285222278081"> WhatApps </a>-
+            <a href="https://t.me/AanSuseno"> Telegram</a>
+        </div>
+    </body>
+</html>

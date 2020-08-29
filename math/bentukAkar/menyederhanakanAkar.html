@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>by Aan Suseno</title>
+        <style type="text/css">
+            a{
+                color: blue;            
+            }
+        </style>
+        <script type="text/javascript">
+            function opsi1() {
+                var a = parseFloat(document.formAan.a.value);
+                var b = parseFloat(document.formAan.b.value);
+                var c = parseFloat(document.formAan.c.value);
+                var d = parseFloat(document.formAan.d.value);
+
+                if (d==c) {
+                    document.getElementById("langkah").innerHTML = "<sup>" + c + "</sup>&radic;(" + a + "*" +b + ") = <sup>" + c + "</sup>&radic;(" + a * b + ")";
+                } else {
+                    document.getElementById("langkah").innerHTML = "<i>Nilai n harus sama</i>";
+                }
+            }
+
+            function opsi2() {
+                var a = parseFloat(document.formAan.a1.value);
+                var n = parseFloat(document.formAan.n1.value);
+                var p = parseFloat(document.formAan.p1.value);
+
+                if (p >= 0) {
+                    document.getElementById("langkah2").innerHTML = "(<sup>" + n + "</sup>&radic;(" + a + "))<sup>" + p + "</sup> = <sup>" + n + "</sup>&radic;(" + a + ")<sup>" + p + "</sup> = <sup>" + n + "</sup>&radic;(" + Math.pow(a,p) + ")";
+                } else {
+                    document.getElementById("langkah2").innerHTML = "(<sup>" + n + "</sup>&radic;(" + a + "))<sup>" + p + "</sup> = <sup>" + n + "</sup>&radic;(" + a + ")<sup>" + p + "</sup> = <sup>" + n + "</sup>&radic;(1/" + Math.pow(a,-1 * p) + ")";
+                }
+            }
+
+            function opsi3() {
+                var a = parseFloat(document.formAan.a3.value);
+                var b = parseFloat(document.formAan.b3.value);
+                var c = parseFloat(document.formAan.c3.value);
+                var d = parseFloat(document.formAan.d3.value);
+
+                if (d==c) {
+                    document.getElementById("langkah3").innerHTML = "<sup>" + c + "</sup>&radic;(" + a + "/" +b + ") = <sup>" + c + "</sup>&radic;(" + a / b + ")";
+                } else {
+                    document.getElementById("langkah3").innerHTML = "<i>Nilai n harus sama</i>";
+                }
+            }
+
+            function opsi4() {
+                var a = parseFloat(document.formAan.a4.value);
+                var n = parseFloat(document.formAan.n4.value);
+                var m = parseFloat(document.formAan.m4.value);
+
+                document.getElementById("langkah4").innerHTML = "<sup>" + n + "</sup>&radic;(<sup>" + m + "</sup>&radic;(" + a + ")) = <sup>(" + n + ")(" + m + ")</sup>&radic;(" + a + ") => <sup>" + n * m + "</sup>&radic;(" + a + ")";
+            }
+
+            function opsi5() {
+                var a = parseFloat(document.formAan.a5.value);
+                var n = parseFloat(document.formAan.n5.value);
+                var m = parseFloat(document.formAan.m5.value);
+                var p = parseFloat(document.formAan.p5.value);
+
+                document.getElementById("langkah5").innerHTML = "<sup>" + n + "</sup>&radic;(" + a + ")<sup>(" + m + ")(" + p + ")</sup> => <sup>" + n + "</sup>&radic;(" + a + ")<sup>(" + m*p + ")</sup> => <sup>" + n + "</sup>&radic;(" + Math.pow(a,m*p) + ")";
+            }
+        </script>
+    </head>
+    <body>
+
+        <a href="../../index.html">
+            <button>Home</button>
+        </a>
+        <hr>
+        
+
+        <form name="formAan">
+        	<text><sup>n</sup>&radic;(a) * <sup>n</sup>&radic;(b) = <sup>n</sup>&radic;(ab)</text><br>
+            <sup><input type="text" name="c" style="width: 12px;" placeholder="n"></input></sup>
+            &radic;(<input type="text" name="a" style="width: 27px;" placeholder="a">) + 
+            <sup><input type="text" name="d" style="width: 12px;" placeholder="n"></input></sup>
+            &radic;(<input type="text" name="b" style="width: 27px;" placeholder="b">)
+            <input type="button" value="=" onclick="opsi1()"> 
+            <text id="langkah"></text>
+            <hr>
+            <text>(<sup>n</sup>&radic;(a))<sup>p</sup> = <sup>n</sup>&radic;(a)<sup>p</sup></text><br>
+            (<sup><input type="text" name="n1" style="width: 12px;" placeholder="n"></input></sup>
+            &radic;(<input type="text" name="a1" style="width: 27px;" placeholder="a">))
+            <sup><input type="text" name="p1" style="width: 12px;" placeholder="p"></input></sup>
+            <input type="button" value="=" onclick="opsi2()"> 
+            <text id="langkah2"></text>
+            <hr>
+            <text><sup>n</sup>&radic;(a) / <sup>n</sup>&radic;(b) = <sup>n</sup>&radic;(a/b)</text><br>
+            <sup><input type="text" name="c3" style="width: 12px;" placeholder="n"></input></sup>
+            &radic;(<input type="text" name="a3" style="width: 27px;" placeholder="a">) + 
+            <sup><input type="text" name="d3" style="width: 12px;" placeholder="n"></input></sup>
+            &radic;(<input type="text" name="b3" style="width: 27px;" placeholder="b">)
+            <input type="button" value="=" onclick="opsi3()"> 
+            <text id="langkah3"></text>
+            <hr>
+            <text><sup>n</sup>&radic;(<sup>m</sup>&radic;(a)) = <sup>nm</sup>&radic;(a)</text><br>
+            <sup><input type="text" name="n4" style="width: 12px;" placeholder="n"></input></sup>
+            &radic;(<sup><input type="text" name="m4" style="width: 12px;" placeholder="m"></input></sup>
+            &radic;(<input type="text" name="a4" style="width: 27px;" placeholder="a">))
+            <input type="button" value="=" onclick="opsi4()"> 
+            <text id="langkah4"></text>
+            <hr>
+            <text>(<sup>n</sup>&radic;a<sup>m</sup>)<sup>p</sup> = <sup>n</sup>&radic;(a)<sup>mp</sup></text><br>
+            (<sup><input type="text" name="n5" style="width: 12px;" placeholder="n"></input></sup>
+            &radic;<input type="text" name="a5" style="width: 27px;" placeholder="a">
+            <sup><input type="text" name="m5" style="width: 12px;" placeholder="m"></input></sup>)
+            <sup><input type="text" name="p5" style="width: 12px;" placeholder="p"></input></sup>
+            <input type="button" value="=" onclick="opsi5()"> 
+            <text id="langkah5"></text>
+        </form>
+        
+
+
+        <!-- hubungi saya -->
+        <div style="text-align: center;">
+            <hr/>
+            <p>Laporan masalah, kritik, saran, atau pengajuan materi silahkan hubungi Aan:</p>
+            <a href="https://facebook.com/aan.s.o.92"> Facebook </a> -
+            <a href="https://twiter.com/AanWootan?s=09"> Twiter </a> -
+            <a href="https://www.instagram.com/_aanrunner/"> Instagram </a> -
+            <a href="https://github.com/WootanAan"> GitHub </a> - 
+            <a href="mailto:aansuseno822@gmail.com">  Email </a> -
+            <a href="https://wa.me/6285222278081"> WhatApps </a>-
+            <a href="https://t.me/AanSuseno"> Telegram</a>
+        </div>
+    </body>
+</html>

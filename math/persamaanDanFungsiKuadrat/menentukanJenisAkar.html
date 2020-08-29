@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            by AAn Suseno
+        </title>
+        <style type="text/css">
+            a{
+                color: blue;            
+            }
+        </style>
+        <script language="JavaScript" type="text/JavaScript">
+            function hitung() {
+                var a = parseFloat(document.formAan.a.value);
+                var b = parseFloat(document.formAan.b.value);
+                var c = parseFloat(document.formAan.c.value);
+                var d = b * b;
+                var e = 4 * a * c;
+                var f = d - e;
+
+                if ( f > 0) {
+                    var simbol = '>';
+                    var kalimat = "dua akar riil berbeda";
+                } else if ( f == 0) {
+                    var simbol = '=';
+                    var kalimat = "dua akar kembar";
+                } else if ( f < 0) {
+                    var simbol = '<';
+                    var kalimat = "dua akar imajiner(tidak mempunyai akar riil)";
+                }
+                
+                document.getElementById("langkah1").innerHTML = a + "x<sup>2</sup> + "+ b + "x + " + c + " = 0";
+                document.getElementById("langkah2").innerHTML = " ==>  a=" + a + "; b=" + b + "; c=" + c + "<br><br>";
+                document.getElementById("langkah3").innerHTML = "D = b<sup>2</sup> - 4ac<br>";
+                document.getElementById("langkah4").innerHTML = "D = " + b + "<sup>2</sup> - 4*" + a + "*" + c + "<br>";
+                document.getElementById("langkah5").innerHTML = "D = " + d +" - " + e + "<br>";
+                document.getElementById("langkah6").innerHTML = "D = " + f + "<br>";
+                document.getElementById("langkah7").innerHTML = "D " + simbol + " 0<br>";
+                document.getElementById("langkah8").innerHTML = "Maka persamaan kuadrat diatas mempunyai " + kalimat;
+            }
+        </script>
+    </head>
+    <body>
+        <a href="../../index.html">
+            <button>Home</button>
+        </a>
+        <hr>
+        <form name="formAan">
+            <input type="text" name="a" style="width: 20px;">x<sup>2</sup> +
+            <input type="text" name="b" style="width: 20px;">x + 
+            <input type="text" name="c" style="width: 20px;"> = 0
+            <br><br>
+            <input type="button" name="tombol" value="hitung" onclick="hitung()">
+        </form>
+        <br>
+        <i>Jawab:</i>
+        <br>
+        <text id="langkah1"></text>
+        <text id="langkah2"></text>
+        <text id="langkah3"></text>
+        <text id="langkah4"></text>
+        <text id="langkah5"></text>
+        <text id="langkah6"></text>
+        <text id="langkah7"></text>
+        <text id="langkah8"></text><br>
+
+
+        <!-- hubungi saya -->
+        <div style="text-align: center;">
+            <hr/>
+            <p>Laporan masalah, kritik, saran, atau pengajuan materi silahkan hubungi Aan:</p>
+            <a href="https://facebook.com/aan.s.o.92"> Facebook </a> -
+            <a href="https://twiter.com/AanWootan?s=09"> Twiter </a> -
+            <a href="https://www.instagram.com/_aanrunner/"> Instagram </a> -
+            <a href="https://github.com/WootanAan"> GitHub </a> - 
+            <a href="mailto:aansuseno822@gmail.com">  Email </a> -
+            <a href="https://wa.me/6285222278081"> WhatApps </a>-
+            <a href="https://t.me/AanSuseno"> Telegram</a>
+        </div>
+    </body>
+</html>

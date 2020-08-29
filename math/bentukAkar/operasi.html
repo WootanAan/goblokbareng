@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>by Aan Suseno</title>
+        <style type="text/css">
+            a{
+                color: blue;            
+            }
+        </style>
+        <script type="text/javascript">
+            function sifat1() {
+                var a = parseFloat(document.formAan.a.value);
+                var b = parseFloat(document.formAan.b.value);
+                var c = parseFloat(document.formAan.c.value);
+                var d = parseFloat(document.formAan.d.value);
+                var e = a + c;
+
+                if (b == d) {
+                	document.getElementById("langkah").innerHTML = "<text>a&radic;(c) + b&radic;(c) = a + b &radic;(c)</text><br>";
+                	document.getElementById("langkah1").innerHTML = "<text>" + a + "&radic;(" + b + ") + " + c + "&radic;(" + d + ") = " + a + " + " + c + " &radic;(" + d + ")</text><br>";
+                	document.getElementById("langkah2").innerHTML = "<text>" + a + "&radic;(" + b + ") + " + c + "&radic;(" + d + ") = " + e + " &radic;(" + d + ")</text><br>";
+                } else {
+                	document.getElementById("langkah").innerHTML = "<text>Nilai c harus sama</text>";
+                }
+            }
+
+            function sifat2() {
+                var a = parseFloat(document.formAan.a2.value);
+                var b = parseFloat(document.formAan.b2.value);
+                var c = parseFloat(document.formAan.c2.value);
+                var d = parseFloat(document.formAan.d2.value);
+                var e = a - c;
+
+                if (b == d) {
+                	document.getElementById("langkah12").innerHTML = "<text>a&radic;(c) + b&radic;(c) = a + b &radic;(c)</text><br>";
+                	document.getElementById("langkah22").innerHTML = "<text>" + a + "&radic;(" + b + ") - " + c + "&radic;(" + d + ") = " + a + " - " + c + " &radic;(" + d + ")</text><br>";
+                	document.getElementById("langkah32").innerHTML = "<text>" + a + "&radic;(" + b + ") - " + c + "&radic;(" + d + ") = " + e + " &radic;(" + d + ")</text><br>";
+                } else {
+                	document.getElementById("langkah12").innerHTML = "<text>Nilai c harus sama</text>";
+                }
+            }
+
+            function sifat3() {
+                var a = parseFloat(document.formAan.a3.value);
+                var b = parseFloat(document.formAan.b3.value);
+                var c = parseFloat(document.formAan.c3.value);
+                var d = parseFloat(document.formAan.d3.value);
+                var e = a - c;
+
+                document.getElementById("langkah13").innerHTML = "a&radic;(c) * b&radic;(d) = a*b&radic;(c*d)<br>";
+                document.getElementById("langkah23").innerHTML = a + "&radic;(" + c + ") * " + b + "&radic;(" + d + ") = " + a + "*" + b + "&radic;((" + c + ")(" + d + "))<br>";
+                document.getElementById("langkah33").innerHTML = a + "&radic;(" + c + ") * " + b + "&radic;(" + d + ") = " + a * b + "&radic;(" + c * d + ")<br>";
+            }
+        </script>
+    </head>
+    <body>
+
+        <a href="../../index.html">
+            <button>Home</button>
+        </a>
+        <hr>
+        
+
+        <form name="formAan">
+        	<b>Penjumlahan</b><br>
+        	<text>a&radic;(c) + b&radic;(c)</text><br>
+        	<input type="text" name="a" style="width: 20px;" placeholder="a">
+            &radic;(<input type="text" name="b" style="width: 20px;" placeholder="c">) + 
+            <input type="text" name="c" style="width: 20px;" placeholder="d">
+            &radic;(<input type="text" name="d" style="width: 20px;" placeholder="c">)
+            <br><br>
+            <input type="button" value="hitung" onclick="sifat1()"> 
+            <br><i>Jawab:</i><br>
+            <text id="langkah"></text>
+            <text id="langkah1"></text>
+            <text id="langkah2"></text>
+            <hr>
+            <b>Pengurangan</b><br>
+        	<text>a&radic;(c) - b&radic;(c)</text><br>
+        	<input type="text" name="a2" style="width: 20px;" placeholder="a">
+            &radic;(<input type="text" name="b2" style="width: 20px;" placeholder="c">) - 
+            <input type="text" name="c2" style="width: 20px;" placeholder="d">
+            &radic;(<input type="text" name="d2" style="width: 20px;" placeholder="c">)
+            <br><br>
+            <input type="button" value="hitung" onclick="sifat2()"> 
+            <br><i>Jawab:</i><br>
+            <text id="langkah12"></text>
+            <text id="langkah22"></text>
+            <text id="langkah32"></text>
+            <hr>
+            <b>Perkalian</b><br>
+        	<text>a&radic;(c) * b&radic;(d)</text><br>
+        	<input type="text" name="a3" style="width: 20px;" placeholder="a">
+            &radic;(<input type="text" name="b3" style="width: 20px;" placeholder="c">) * 
+            <input type="text" name="c3" style="width: 20px;" placeholder="b">
+            &radic;(<input type="text" name="d3" style="width: 20px;" placeholder="d">)
+            <br><br>
+            <input type="button" value="hitung" onclick="sifat3()"> 
+            <br><i>Jawab:</i><br>
+            <text id="langkah13"></text>
+            <text id="langkah23"></text>
+            <text id="langkah33"></text>
+        </form>
+        
+
+
+        <!-- hubungi saya -->
+        <div style="text-align: center;">
+            <hr/>
+            <p>Laporan masalah, kritik, saran, atau pengajuan materi silahkan hubungi Aan:</p>
+            <a href="https://facebook.com/aan.s.o.92"> Facebook </a> -
+            <a href="https://twiter.com/AanWootan?s=09"> Twiter </a> -
+            <a href="https://www.instagram.com/_aanrunner/"> Instagram </a> -
+            <a href="https://github.com/WootanAan"> GitHub </a> - 
+            <a href="mailto:aansuseno822@gmail.com">  Email </a> -
+            <a href="https://wa.me/6285222278081"> WhatApps </a>-
+            <a href="https://t.me/AanSuseno"> Telegram</a>
+        </div>
+    </body>
+</html>

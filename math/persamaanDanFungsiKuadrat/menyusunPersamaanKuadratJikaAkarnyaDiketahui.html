@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            by AAn Suseno
+        </title>
+        <style type="text/css">
+            a{
+                color: blue;            
+            }
+        </style>
+        <script language="JavaScript" type="text/JavaScript">
+
+            function hitung() {
+                var a = parseFloat(document.formAan.a.value);
+                var b = parseFloat(document.formAan.b.value);
+                var c = a + b;
+                
+                document.getElementById("langkah1").innerHTML = "x<sub>1</sub> => " + a + "<br> x<sub>2</sub> => " + b + "<br><br>";
+                document.getElementById("langkah2").innerHTML = "x<sup>2</sup> - (x<sub>1</sub> + x<sub>2</sub>)x + x<sub>1</sub>x<sub>2</sub> = 0<br>";
+                document.getElementById("langkah3").innerHTML = "x<sup>2</sup> - (" + a +" + " + b + ")x + (" + a + ")(" + b + ") = 0<br>";
+                document.getElementById("langkah4").innerHTML = "x<sup>2</sup> - (" + c + ")x + (" + a * b + ") = 0<br>";
+            }
+        </script>
+    </head>
+    <body>
+        <a href="../../index.html">
+            <button>Home</button>
+        </a>
+        <hr>
+        <form name="formAan">
+            x<sub>1</sub> = <input type="text" name="a" style="width: 20px;"><br>
+            x<sub>2</sub> = <input type="text" name="b" style="width: 20px;">
+            <br>
+            <br>
+            <input type="button" onclick="hitung()" value="hitung"></input>
+        </form>
+        <br>
+        <i>Jawab:</i>
+        <br>
+
+        <text id="langkah1"></text>
+        <text id="langkah2"></text>
+        <text id="langkah3"></text>
+        <text id="langkah4"></text>
+        <text id="langkah5"></text>
+        <text id="langkah6"></text>
+        <text id="langkah7"></text>
+        <text id="langkah8"></text>
+        <text id="langkah9"></text>
+        <text id="langkah10"></text>
+
+
+        <!-- hubungi saya -->
+        <div style="text-align: center;">
+            <hr/>
+            <p>Laporan masalah, kritik, saran, atau pengajuan materi silahkan hubungi Aan:</p>
+            <a href="https://facebook.com/aan.s.o.92"> Facebook </a> -
+            <a href="https://twiter.com/AanWootan?s=09"> Twiter </a> -
+            <a href="https://www.instagram.com/_aanrunner/"> Instagram </a> -
+            <a href="https://github.com/WootanAan"> GitHub </a> - 
+            <a href="mailto:aansuseno822@gmail.com">  Email </a> -
+            <a href="https://wa.me/6285222278081"> WhatsApp </a>-
+            <a href="https://t.me/AanSuseno"> Telegram</a>
+        </div>
+    </body>
+</html>

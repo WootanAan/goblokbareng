@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>by Aan Suseno</title>
+        <style type="text/css">
+            a{
+                color: blue;            
+            }
+        </style>
+        <script language="JavaScript" type="text/JavaScript">
+            function hitung() {
+                var B = parseFloat(document.formAan.b.value);
+                var C = parseFloat(document.formAan.c.value);
+                var d = -1 * C;
+                var de = B/2;
+                var e = de * de;
+                var g = B / 2;
+                var h = d + e;
+                var f = Math.sqrt(h);
+                var i = -1 * g;
+                var j = f + i;
+                var k = -1 * f;
+                var l = k + i;
+
+                document.getElementById("langkah1").innerHTML = "x<sup>2</sup> + "+ B + "x + " + C + " = 0<br><br>";
+                document.getElementById("langkah1.1").innerHTML = "Konstanta dipindah ke ruas kanan<br>";
+                document.getElementById("langkah2").innerHTML = "x<sup>2</sup> + "+ B + "x " + " = " + d + "<br><br>";
+                document.getElementById("langkah3").innerHTML = "Tambahkan kedua ruas dengan kuadrat setengah koefisien x<br>";
+                document.getElementById("langkah4").innerHTML = "x<sup>2</sup> + " + B + "x + " + de + "<sup>2</sup> = " + d + " + " + de + "<sup>2</sup><br>";
+                document.getElementById("langkah5").innerHTML = "x<sup>2</sup> + " + B + "x + " + e + " = " + d + " + " + e + "<br>";
+                document.getElementById("langkah6").innerHTML = "(x + " + g + ")<sup>2</sup> = " + h + "<br>";
+                document.getElementById("langkah7").innerHTML = "x + " + g + " = &plusmn;" + f + "<br><br>";
+                document.getElementById("langkah8").innerHTML = "x + " + g + " = " + f + "<br>";
+                document.getElementById("langkah9").innerHTML = "x" + " = " + f + " + " + i + "<br>";
+                document.getElementById("langkah10").innerHTML = "x" + " = " + j + "<br><br>";
+                document.getElementById("langkah11").innerHTML = "x + " + g + " = " + k + "<br>";
+                document.getElementById("langkah12").innerHTML = "x" + " = " + k + " + " + i + "<br>";
+                document.getElementById("langkah13").innerHTML = "x" + " = " + l + "<br><br>";
+                document.getElementById("langkah14").innerHTML = "Jadi himpunan penyelesaiannya menjadi {" + j + "," + l + "}.";
+            }
+        </script>
+        
+    </head>
+    <body>
+        <a href="../../index.html">
+            <button>Home</button>
+        </a>
+        <hr>
+        <i>* koefisien x<sup>2</sup> harus 1 </i>
+        <form name="formAan">
+            <text>X<sup>2</sup> + </text> 
+            <input type="text" name="b" style="width: 20px;">X + 
+            <input type="text" name="c" style="width: 20px;"> = 0
+            <br> <br>
+            <input type="button" name="tombol" value="hitung" onclick="hitung()">
+        </form>
+        
+        <i>Jawab:</i><br>
+        <text id="langkah1"></text>
+        <text id="langkah1.1"></text>
+        <text id="langkah2"></text>
+        <text id="langkah3"></text>
+        <text id="langkah4"></text>
+        <text id="langkah5"></text>
+        <text id="langkah6"></text>
+        <text id="langkah7"></text>
+        <text id="langkah8"></text>
+        <text id="langkah9"></text>
+        <text id="langkah10"></text>
+        <text id="langkah11"></text>
+        <text id="langkah12"></text>
+        <text id="langkah13"></text>
+        <text id="langkah14"></text><br>
+
+
+        <!-- hubungi saya -->
+        <div style="text-align: center;">
+            <hr/>
+            <p>Laporan masalah, kritik, saran, atau pengajuan materi silahkan hubungi Aan:</p>
+            <a href="https://facebook.com/aan.s.o.92"> Facebook </a> -
+            <a href="https://twiter.com/AanWootan?s=09"> Twiter </a> -
+            <a href="https://www.instagram.com/_aanrunner/"> Instagram </a> -
+            <a href="https://github.com/WootanAan"> GitHub </a> - 
+            <a href="mailto:aansuseno822@gmail.com">  Email </a> -
+            <a href="https://wa.me/6285222278081"> WhatApps </a>-
+            <a href="https://t.me/AanSuseno"> Telegram</a>
+        </div>
+    </body>
+</html>

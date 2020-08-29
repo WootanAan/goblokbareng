@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>by Aan Suseno</title>
+        <style type="text/css">
+            .box{
+                border-bottom: solid 2px black;
+            }
+            .tab{
+                position: absolute;
+                left: 97px;
+            }
+            .tab1{
+                position: absolute;
+                left: 73px;
+            }
+            .tab2{
+                position: absolute;
+                left: 67px;
+            }
+            a{
+                color: blue;            
+            }
+        </style>
+        <script language="JavaScript" type="text/JavaScript">
+            function hitung() {
+                var a = parseFloat(document.formAan.a.value);
+                var b = parseFloat(document.formAan.b.value);
+                var c = parseFloat(document.formAan.c.value);
+                var d = -1 * b;
+                var e = b * b;
+                var f = 4 * a * c;
+                var g = 2 * a;
+                var h = e - f;
+                var i = Math.sqrt(h);
+                var j = d + i;
+                var k = d - i;
+                var l = k / g;
+
+                document.getElementById("langkah1").innerHTML = a + "x<sup>2</sup> + "+ b + "x + " + c + " = 0";
+                document.getElementById("langkah2").innerHTML = " ==>  a=" + a + "; b=" + b + "; c=" + c + "<br><br>";
+                document.getElementById("langkah2-1").innerHTML = "x<sub>1,2</sub> = ";
+                document.getElementById("langkah3").innerHTML = "-b &plusmn; &radic;(b<sup>2</sup> - 4ac)<br>";
+                document.getElementById("langkah4").innerHTML = "2a";
+                document.getElementById("langkah4-1").innerHTML = "x<sub>1,2</sub> = ";
+                document.getElementById("langkah5").innerHTML = "-(" + b + ") &plusmn; &radic;(" + b + "<sup>2</sup> - 4*" + a + "*" + c + ")<br>";
+                document.getElementById("langkah6").innerHTML = "2 * " + a;
+                document.getElementById("langkah6-1").innerHTML = "x<sub>1,2</sub> = ";
+                document.getElementById("langkah7").innerHTML = d + " &plusmn; &radic;(" + e + " - (" + f + "))<br>";
+                document.getElementById("langkah8").innerHTML = g;
+                document.getElementById("langkah8-1").innerHTML = "x<sub>1,2</sub> = ";
+                document.getElementById("langkah9").innerHTML = d + " &plusmn; &radic;(" + h + ")<br>";
+                document.getElementById("langkah10").innerHTML = g;
+                document.getElementById("langkah10-1").innerHTML = "x<sub>1,2</sub> = ";
+                document.getElementById("langkah11").innerHTML = d + " &plusmn; " + i + "<br>";
+                document.getElementById("langkah12").innerHTML = g;
+                document.getElementById("langkah10-1-1").innerHTML = "x<sub>1</sub> = ";
+                document.getElementById("langkah12-1").innerHTML = d + " + " + i + "<br>";
+                document.getElementById("langkah14").innerHTML = g;
+                document.getElementById("langkah14-1").innerHTML = "x<sub>1</sub> = ";
+                document.getElementById("langkah15").innerHTML = j + " / " + g;
+                document.getElementById("langkah15-1").innerHTML = "x<sub>1</sub> = ";
+                document.getElementById("langkah16").innerHTML = j / g;
+                document.getElementById("langkah16-1").innerHTML = "x<sub>2</sub> = ";
+                document.getElementById("langkah17").innerHTML = d + " - " + i + "<br>";
+                document.getElementById("langkah18").innerHTML = g;
+                document.getElementById("langkah18-1").innerHTML = "x<sub>2</sub> = ";
+                document.getElementById("langkah19").innerHTML = k + " / " + g;
+                document.getElementById("langkah19-1").innerHTML = "x<sub>2</sub> = ";
+                document.getElementById("langkah20").innerHTML = l;
+                document.getElementById("langkah21").innerHTML = "Jadi himpunan penyelesaiannya menjadi {" + j / g + "," + l + "}.";
+                }
+        </script>
+    </head>
+    <body>
+        <a href="../../index.html">
+            <button>Home</button>
+        </a>
+        <hr>
+        <form name="formAan">
+            <input type="text" name="a" style="width: 20px;">x<sup>2</sup> +
+            <input type="text" name="b" style="width: 20px;">x + 
+            <input type="text" name="c" style="width: 20px;"> = 0
+            <br><br>
+            <input type="button" name="tombol" value="hitung" onclick="hitung()">
+        </form>
+        <br>
+        <i>Jawab:</i>
+        <br>
+        <text id="langkah1"></text>
+        <text id="langkah2"></text>
+        <text id="langkah2-1"></text>
+        <text id="langkah3" class="box"></text>
+        <text id="langkah4" class="tab"></text><br>
+        <text id="langkah4-1"></text>
+        <text id="langkah5" class="box"></text>
+        <text id="langkah6" class="tab"></text><br>
+        <text id="langkah6-1"></text>
+        <text id="langkah7" class="box"></text>
+        <text id="langkah8" class="tab"></text><br>
+        <text id="langkah8-1"></text>
+        <text id="langkah9" class="box"></text>
+        <text id="langkah10" class="tab1"></text><br>
+        <text id="langkah10-1"></text>
+        <text id="langkah11" class="box"></text>
+        <text id="langkah12" class="tab1"></text><br><br>
+        <div style="color: red;">
+            <text id="langkah10-1-1"></text>
+            <text id="langkah12-1" class="box"></text>
+            <text id="langkah14" class="tab2"></text><br>
+            <text id="langkah14-1"></text>
+            <text id="langkah15"></text><br>
+            <text id="langkah15-1"></text>
+            <text id="langkah16"></text><br><br>
+        </div>
+        <div style="color: blueviolet;">
+            <text id="langkah16-1"></text>
+            <text id="langkah17" class="box"></text>
+            <text id="langkah18" class="tab2"></text><br>
+            <text id="langkah18-1"></text>
+            <text id="langkah19"></text><br>
+            <text id="langkah19-1"></text>
+            <text id="langkah20"></text><br>
+        </div>
+        <text id="langkah21"></text><br>
+
+
+        <!-- hubungi saya -->
+        <div style="text-align: center;">
+            <hr/>
+            <p>Laporan masalah, kritik, saran, atau pengajuan materi silahkan hubungi Aan:</p>
+            <a href="https://facebook.com/aan.s.o.92"> Facebook </a> -
+            <a href="https://twiter.com/AanWootan?s=09"> Twiter </a> -
+            <a href="https://www.instagram.com/_aanrunner/"> Instagram </a> -
+            <a href="https://github.com/WootanAan"> GitHub </a> - 
+            <a href="mailto:aansuseno822@gmail.com">  Email </a> -
+            <a href="https://wa.me/6285222278081"> WhatsApp </a>-
+            <a href="https://t.me/AanSuseno"> Telegram</a>
+        </div>
+    </body>
+</html>

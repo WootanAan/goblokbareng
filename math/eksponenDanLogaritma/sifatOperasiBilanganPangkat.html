@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>by Aan Suseno</title>
+        <style type="text/css">
+            a{
+                color: blue;            
+            }
+        </style>
+        <script language="JavaScript" type="text/JavaScript">
+            function sifat1() {
+                var a = parseFloat(document.formAan.a.value);
+                var b = parseFloat(document.formAan.b.value);
+                var c = parseFloat(document.formAan.m.value);
+                var d = parseFloat(document.formAan.n.value);
+                var e = c + d;
+                var hasilPangkat = Math.pow(a,e);
+
+                if (a != b) {
+                    document.getElementById("langkah1").innerHTML = "Bilangan pokok/basis harus sama";
+                } else if (a == b) {
+                    document.getElementById("langkah1").innerHTML = "<text>a<sup>m</sup> * a<sup>n</sup></text> = <text>a<sup>m+n</sup><br>";
+                    document.getElementById("langkah2").innerHTML = "<text>" + a + "<sup>" + c + "</sup> * " + a + "<sup>" + d +"</sup></text> = <text>" + a + "<sup>" + c + "+" + d + "</sup><br>";
+                    document.getElementById("langkah3").innerHTML = "<text>" + a + "<sup>" + c + "</sup> * " + a + "<sup>" + d +"</sup></text> = <text>" + a + "<sup>" + e + "</sup><br>";
+
+                    if (e < 0) {
+                        document.getElementById("langkah4").innerHTML = "<text>" + a + "<sup>" + c + "</sup> * " + a + "<sup>" + d +"</sup></text> = 1/" + hasilPangkat + "<br>";
+                        document.getElementById("langkah5").innerHTML = "<text>" + a + "<sup>" + c + "</sup> * " + a + "<sup>" + d +"</sup></text> = " + 1 / hasilPangkat + "<br>";
+                    } else {
+                        document.getElementById("langkah4").innerHTML = "<text>" + a + "<sup>" + c + "</sup> * " + a + "<sup>" + d +"</sup></text> = " + hasilPangkat + "<br>";
+                    }
+                }
+            }
+
+            function sifat2() {
+                var a = parseFloat(document.formAan.a2.value);
+                var b = parseFloat(document.formAan.b2.value);
+                var c = parseFloat(document.formAan.m2.value);
+                var d = parseFloat(document.formAan.n2.value);
+                var e = c - d;
+                var hasilPangkat = Math.pow(a,e);
+
+                if (a != b) {
+                    document.getElementById("langkah12").innerHTML = "Bilangan pokok/basis harus sama";
+                } else if (a == b) {
+                    document.getElementById("langkah12").innerHTML = "<text>a<sup>m</sup> / a<sup>n</sup></text> = <text>a<sup>m-n</sup><br>";
+                    document.getElementById("langkah22").innerHTML = "<text>" + a + "<sup>" + c + "</sup> / " + a + "<sup>" + d +"</sup></text> = <text>" + a + "<sup>" + c + "-" + d + "</sup><br>";
+                    document.getElementById("langkah32").innerHTML = "<text>" + a + "<sup>" + c + "</sup> / " + a + "<sup>" + d +"</sup></text> = <text>" + a + "<sup>" + e + "</sup><br>";
+
+                    if (e < 0) {
+                        document.getElementById("langkah42").innerHTML = "<text>" + a + "<sup>" + c + "</sup> / " + a + "<sup>" + d +"</sup></text> = 1/" + hasilPangkat + "<br>";
+                        document.getElementById("langkah52").innerHTML = "<text>" + a + "<sup>" + c + "</sup> / " + a + "<sup>" + d +"</sup></text> = " + 1 / hasilPangkat + "<br>";
+                    } else {
+                        document.getElementById("langkah42").innerHTML = "<text>" + a + "<sup>" + c + "</sup> / " + a + "<sup>" + d +"</sup></text> = " + hasilPangkat + "<br>";
+                    }
+                }
+            }
+
+            function sifat3() {
+                var a = parseFloat(document.formAan.a3.value);
+                var b = parseFloat(document.formAan.m3.value);
+                var c = parseFloat(document.formAan.n3.value);
+                var d = b * c;
+                var hasilPangkat = Math.pow(a,d);
+
+                document.getElementById("langkah13").innerHTML = "(a<sup>m</sup>)<sup>n</sup> = a<sup>m*n</sup><br>";
+                document.getElementById("langkah23").innerHTML = "(" + a + "<sup>" + b + "</sup>)<sup>" + c + "</sup> = " + a + "<sup>" + b + "*" + c + "</sup><br>";
+                document.getElementById("langkah33").innerHTML = "(" + a + "<sup>" + b + "</sup>)<sup>" + c + "</sup> = " + a + "<sup>" + d + "</sup><br>";
+                if (d < 0) {
+                    document.getElementById("langkah43").innerHTML = "(" + a + "<sup>" + b + "</sup>)<sup>" + c + "</sup> = 1/" + hasilPangkat + "<br>";
+                    document.getElementById("langkah53").innerHTML = "(" + a + "<sup>" + b + "</sup>)<sup>" + c + "</sup> = " + 1 / hasilPangkat + "<br>";
+                } else {
+                    document.getElementById("langkah43").innerHTML = "(" + a + "<sup>" + b + "</sup>)<sup>" + c + "</sup> = " + hasilPangkat + "<br>";
+                }
+            }
+        </script>
+        
+    </head>
+    <body>
+
+        <a href="../../index.html">
+            <button>Home</button>
+        </a>
+        <hr>
+        <text>a<sup>m</sup> * a<sup>n</sup></text><br>
+        <form name="formAan">
+            <input type="text" name="a" style="width: 27px;" placeholder="a">
+            <sup><input type="text" name="m" style="width: 12px" placeholder="m"></sup> * 
+            <input type="text" name="b" style="width: 27px;" placeholder="a">
+            <sup><input type="text" name="n" style="width: 12px" placeholder="n"></sup>
+            <br> <br>
+            <input type="button" value="hitung" onclick="sifat1()">
+            <br>
+            <i>Jawab:</i><br>
+            <text id="langkah1"></text>
+            <text id="langkah2"></text>
+            <text id="langkah3"></text>
+            <text id="langkah4"></text>
+            <text id="langkah5"></text>
+            <hr>
+
+            <text>a<sup>m</sup> / a<sup>n</sup></text><br>
+            <input type="text" name="a2" style="width: 27px;" placeholder="a">
+            <sup><input type="text" name="m2" style="width: 12px" placeholder="m"></sup> / 
+            <input type="text" name="b2" style="width: 27px;" placeholder="a">
+            <sup><input type="text" name="n2" style="width: 12px" placeholder="n"></sup>
+            <br> <br>
+            <input type="button" value="hitung" onclick="sifat2()">
+            <br><i>Jawab:</i><br>
+            <text id="langkah12"></text>
+            <text id="langkah22"></text>
+            <text id="langkah32"></text>
+            <text id="langkah42"></text>
+            <text id="langkah52"></text>
+            <hr>
+
+            <text>(a<sup>m</sup>)<sup>n</sup></text><br>
+            (<input type="text" name="a3" style="width: 27px;" placeholder="a">
+            <sup><input type="text" name="m3" style="width: 12px" placeholder="m"></sup>)
+            <sup><input type="text" name="n3" style="width: 12px" placeholder="n"></sup>
+            <br> <br>
+            <input type="button" value="hitung" onclick="sifat3()">
+            <br><i>Jawab:</i><br>
+            <text id="langkah13"></text>
+            <text id="langkah23"></text>
+            <text id="langkah33"></text>
+            <text id="langkah43"></text>
+            <text id="langkah53"></text>
+        </form>
+
+
+        <!-- hubungi saya -->
+        <div style="text-align: center;">
+            <hr/>
+            <p>Laporan masalah, kritik, saran, atau pengajuan materi silahkan hubungi Aan:</p>
+            <a href="https://facebook.com/aan.s.o.92"> Facebook </a> -
+            <a href="https://twiter.com/AanWootan?s=09"> Twiter </a> -
+            <a href="https://www.instagram.com/_aanrunner/"> Instagram </a> -
+            <a href="https://github.com/WootanAan"> GitHub </a> - 
+            <a href="mailto:aansuseno822@gmail.com">  Email </a> -
+            <a href="https://wa.me/6285222278081"> WhatApps </a>-
+            <a href="https://t.me/AanSuseno"> Telegram</a>
+        </div>
+    </body>
+</html>

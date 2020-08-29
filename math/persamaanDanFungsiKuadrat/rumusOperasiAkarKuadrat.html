@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            by AAn Suseno
+        </title>
+        <style type="text/css">
+            td{
+                padding: 15px;
+                border: black 3px solid;
+                text-align: center;
+                
+            }
+            .garis{
+                border-bottom: black 2px solid;
+            }
+            a{
+                color: blue;            
+            }
+        </style>
+        <script language="JavaScript" type="text/JavaScript">
+            function reload() {
+                location.reload()
+            }
+
+            function opsi1() {
+                var a = parseFloat(document.formAan.a.value);
+                var b = parseFloat(document.formAan.b.value);
+                var c = parseFloat(document.formAan.c.value);
+
+                document.getElementById("langkah1").innerHTML = a + "x<sup>2</sup> + "+ b + "x + " + c + " = 0";
+                document.getElementById("langkah2").innerHTML = " ==>  a=" + a + "; b=" + b + "; c=" + c + "<br><br>";
+                document.getElementById("langkah3").innerHTML = "x<sub>1</sub> + x<sub>2</sub> = -b/a<br>";
+                document.getElementById("langkah4").innerHTML = "x<sub>1</sub> + x<sub>2</sub> = -(" + b + ")/" + a + "<br>";
+                document.getElementById("langkah5").innerHTML = "x<sub>1</sub> + x<sub>2</sub> = " + -1 * b + "/" + a + "<br>";
+                document.getElementById("langkah6").innerHTML = "x<sub>1</sub> + x<sub>2</sub> = " + -1 * b / a + "<br>";
+            }
+
+            function opsi2() {
+                var a = parseFloat(document.formAan.a.value);
+                var b = parseFloat(document.formAan.b.value);
+                var c = parseFloat(document.formAan.c.value);
+
+                document.getElementById("langkah1").innerHTML = a + "x<sup>2</sup> + "+ b + "x + " + c + " = 0";
+                document.getElementById("langkah2").innerHTML = " ==>  a=" + a + "; b=" + b + "; c=" + c + "<br><br>";
+                document.getElementById("langkah3").innerHTML = "x<sub>1</sub> * x<sub>2</sub> = c/a<br>";
+                document.getElementById("langkah4").innerHTML = "x<sub>1</sub> * x<sub>2</sub> = " + c + "/" + a + "<br>";
+                document.getElementById("langkah5").innerHTML = "x<sub>1</sub> * x<sub>2</sub> = " + c / a + "<br>";
+            }
+
+            function opsi3() {
+                var a = parseFloat(document.formAan.a.value);
+                var b = parseFloat(document.formAan.b.value);
+                var c = parseFloat(document.formAan.c.value);
+
+                document.getElementById("langkah1").innerHTML = a + "x<sup>2</sup> + "+ b + "x + " + c + " = 0";
+                document.getElementById("langkah2").innerHTML = " ==>  a=" + a + "; b=" + b + "; c=" + c + "<br><br>";
+                document.getElementById("langkah3").innerHTML = "<text class='garis'>x<sub>1</sub> + x<sub>2</sub></text><br>x<sub>1</sub>x<sub>2</sub><br><br>";
+                document.getElementById("langkah4").innerHTML = "<text class='garis'>-b/a</text><br>c/a<br><br>";
+                document.getElementById("langkah4").innerHTML = "<text class='garis'>-(" + b + ")/" + a +"</text><br>" + c + "/" + a + "<br><br>";
+                document.getElementById("langkah5").innerHTML = "<text class='garis'>" + -1 * b / a +"</text><br>" + c / a + "<br><br>";
+                document.getElementById("langkah6").innerHTML = "= " + (-1 * b / a) / (c/a);
+            }
+
+            function opsi4() {
+                var a = parseFloat(document.formAan.a.value);
+                var b = parseFloat(document.formAan.b.value);
+                var c = parseFloat(document.formAan.c.value);
+
+                document.getElementById("langkah1").innerHTML = a + "x<sup>2</sup> + "+ b + "x + " + c + " = 0";
+                document.getElementById("langkah2").innerHTML = " ==>  a=" + a + "; b=" + b + "; c=" + c + "<br><br>";
+                document.getElementById("langkah3").innerHTML = "x<sub>1</sub><sup>2</sup>x<sub>2</sub> + x<sub>1</sub>x<sub>2</sub><sup>2</sup> = x<sub>1</sub>x<sub>2</sub>(x<sub>1</sub> + x<sub>2</sub>)<br>";
+                document.getElementById("langkah4").innerHTML = "x<sub>1</sub><sup>2</sup>x<sub>2</sub> + x<sub>1</sub>x<sub>2</sub><sup>2</sup> = c/a(-b/a)<br>";
+                document.getElementById("langkah5").innerHTML = "x<sub>1</sub><sup>2</sup>x<sub>2</sub> + x<sub>1</sub>x<sub>2</sub><sup>2</sup> = " + c +"/" + a + "(-(" + b +")/" + a +")<br>";
+                document.getElementById("langkah6").innerHTML = "x<sub>1</sub><sup>2</sup>x<sub>2</sub> + x<sub>1</sub>x<sub>2</sub><sup>2</sup> = " + c / a + "(" + -1 * b / a +")<br>";
+                document.getElementById("langkah7").innerHTML = "x<sub>1</sub><sup>2</sup>x<sub>2</sub> + x<sub>1</sub>x<sub>2</sub><sup>2</sup> = " + c / a * (-1 * b / a) +"<br>";
+            }
+
+            function opsi5() {
+                var a = parseFloat(document.formAan.a.value);
+                var b = parseFloat(document.formAan.b.value);
+                var c = parseFloat(document.formAan.c.value);
+
+                document.getElementById("langkah1").innerHTML = a + "x<sup>2</sup> + "+ b + "x + " + c + " = 0";
+                document.getElementById("langkah2").innerHTML = " ==>  a=" + a + "; b=" + b + "; c=" + c + "<br><br>";
+                document.getElementById("langkah3").innerHTML = "x<sub>1</sub><sup>2</sup> + x<sub>2</sub><sup>2</sup> = <text class='garis'>b<sup>2</sup> - 2ac</text><br> <text style='position: absolute; left: 120px'>a<sup>2</sup></text><br><br>";
+                document.getElementById("langkah4").innerHTML = "x<sub>1</sub><sup>2</sup> + x<sub>2</sub><sup>2</sup> = <text class='garis'>"+ b +"<sup>2</sup> - 2(" + a + ")(" + c +")</text><br> <text style='position: absolute; left: 120px'>" + a +"<sup>2</sup></text><br><br>";
+                document.getElementById("langkah5").innerHTML = "x<sub>1</sub><sup>2</sup> + x<sub>2</sub><sup>2</sup> = <text class='garis'>"+ b * b + " + (" + (-2 * a * c) + ")</text><br> <text style='position: absolute; left: 110px'>" + a * a + "</text><br><br>";
+                document.getElementById("langkah6").innerHTML = "x<sub>1</sub><sup>2</sup> + x<sub>2</sub><sup>2</sup> = "+ (b * b + (-2 * a * c)) /(a * a);
+            }
+
+            function opsi6() {
+                var a = parseFloat(document.formAan.a.value);
+                var b = parseFloat(document.formAan.b.value);
+                var c = parseFloat(document.formAan.c.value);
+                var d = (b * b) - (4 * a * c);
+                var e = Math.sqrt(d);
+
+                document.getElementById("langkah1").innerHTML = a + "x<sup>2</sup> + "+ b + "x + " + c + " = 0";
+                document.getElementById("langkah2").innerHTML = " ==>  a=" + a + "; b=" + b + "; c=" + c + "<br><br>";
+                document.getElementById("langkah3").innerHTML = "x<sub>1</sub> - x<sub>2</sub> = <text class='garis'>&radic;(b<sup>2</sup> - 4ac</text>)<br> <text style='position: absolute; left: 120px'>a</text><br><br>";
+                document.getElementById("langkah4").innerHTML = "x<sub>1</sub> - x<sub>2</sub> = <text class='garis'>&radic;(" + b + "<sup>2</sup> - 4(" + a + ")(" + c +")</text>)<br> <text style='position: absolute; left: 120px'>" + a + "</text><br><br>";
+                document.getElementById("langkah5").innerHTML = "x<sub>1</sub> - x<sub>2</sub> = <text class='garis'>&radic;(" + b * b + " - (" + 4 * a * c +")</text>)<br> <text style='position: absolute; left: 120px'>" + a + "</text><br><br>";
+                document.getElementById("langkah6").innerHTML = "x<sub>1</sub> - x<sub>2</sub> = <text class='garis'>&radic;(" + d +")</text>)<br> <text style='position: absolute; left: 90px'>" + a + "</text><br><br>";
+                document.getElementById("langkah7").innerHTML = "x<sub>1</sub> - x<sub>2</sub> = " + e/a;
+            }
+        </script>
+    </head>
+    <body>
+        <a href="../../index.html">
+            <button>Home</button>
+        </a>
+        <hr>
+        <i>*reload halaman jika ingin berganti operasi</i>
+        <br><br>
+        <form name="formAan">
+            <input type="text" name="a" style="width: 20px;">x<sup>2</sup> +
+            <input type="text" name="b" style="width: 20px;">x + 
+            <input type="text" name="c" style="width: 20px;"> = 0
+            <br><br>
+            pilih operasi : <br>
+            <table>
+                <tr>
+                    <td>
+                        x<sub>1</sub> + x<sub>2</sub><br><br>
+                        <input type="button" onclick="opsi1()" value="klik">
+                    </td>
+                    <td>
+                        x<sub>1</sub> * x<sub>2</sub><br><br>
+                        <input type="button" onclick="opsi2()" value="klik">
+                    </td>
+                    <td>
+                        (1/x<sub>1</sub>) + (1/x<sub>2</sub>)<br><br>
+                        <input type="button" onclick="opsi3()" value="klik">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        x<sub>1</sub><sup>2</sup>x<sub>2</sub> + x<sub>1</sub>x<sub>2</sub><sup>2</sup><br><br>
+                        <input type="button" onclick="opsi4()" value="klik">
+                    </td>
+                    <td>
+                        x<sub>1</sub><sup>2</sup> + x<sub>2</sub><sup>2</sup><br><br>
+                        <input type="button" onclick="opsi5()" value="klik">
+                    </td>
+                    <td>
+                        x<sub>1</sub> - x<sub>2</sub><br><br>
+                        <input type="button" onclick="opsi6()" value="klik">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <br>
+        <i>Jawab:</i>
+        <br>
+
+        <text id="langkah1"></text>
+        <text id="langkah2"></text>
+        <text id="langkah3"></text>
+        <text id="langkah4"></text>
+        <text id="langkah5"></text>
+        <text id="langkah6"></text>
+        <text id="langkah7"></text>
+        <text id="langkah8"></text>
+        <text id="langkah9"></text>
+        <text id="langkah10"></text>
+        <br>
+        <input type="submit" value="Reload" onclick="document.location.reload(true)">
+
+
+        <!-- hubungi saya -->
+        <div style="text-align: center;">
+            <hr/>
+            <p>Laporan masalah, kritik, saran, atau pengajuan materi silahkan hubungi Aan:</p>
+            <a href="https://facebook.com/aan.s.o.92"> Facebook </a> -
+            <a href="https://twiter.com/AanWootan?s=09"> Twiter </a> -
+            <a href="https://www.instagram.com/_aanrunner/"> Instagram </a> -
+            <a href="https://github.com/WootanAan"> GitHub </a> - 
+            <a href="mailto:aansuseno822@gmail.com">  Email </a> -
+            <a href="https://wa.me/6285222278081"> WhatsApp </a>-
+            <a href="https://t.me/AanSuseno"> Telegram</a>
+        </div>
+    </body>
+</html>
